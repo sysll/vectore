@@ -1,0 +1,16 @@
+tensor(0.1822, grad_fn=<MeanBackward0>)
+Accuracy: 51.43%
+tensor(0.1369, grad_fn=<MeanBackward0>)
+Accuracy: 51.43%
+tensor(0.1433, grad_fn=<MeanBackward0>)
+Accuracy: 51.43%
+tensor(0.1384, grad_fn=<MeanBackward0>)
+Accuracy: 51.43%
+tensor(0.1369, grad_fn=<MeanBackward0>)
+Accuracy: 51.43%
+tensor(0.1362, grad_fn=<MeanBackward0>)
+Accuracy: 51.43%
+tensor(0.1371, grad_fn=<MeanBackward0>)
+Accuracy: 51.43%
+tensor(0.1357, grad_fn=<MeanBackward0>)
+Accuracy: 51.43%

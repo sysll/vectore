@@ -1,0 +1,40 @@
+tensor(0.3040, grad_fn=<MeanBackward0>)
+tensor(0.1428, grad_fn=<MeanBackward0>)
+tensor(0.1258, grad_fn=<MeanBackward0>)
+tensor(0.1140, grad_fn=<MeanBackward0>)
+tensor(0.1158, grad_fn=<MeanBackward0>)
+tensor(0.1153, grad_fn=<MeanBackward0>)
+tensor(0.1042, grad_fn=<MeanBackward0>)
+tensor(0.1068, grad_fn=<MeanBackward0>)
+Accuracy: 67.14%
+tensor(0.0960, grad_fn=<MeanBackward0>)
+Accuracy: 69.52%
+tensor(0.0904, grad_fn=<MeanBackward0>)
+Accuracy: 71.43%
+tensor(0.0898, grad_fn=<MeanBackward0>)
+Accuracy: 72.86%
+tensor(0.0857, grad_fn=<MeanBackward0>)
+Accuracy: 70.00%
+tensor(0.0842, grad_fn=<MeanBackward0>)
+Accuracy: 70.95%
+tensor(0.0888, grad_fn=<MeanBackward0>)
+Accuracy: 74.29%
+
+
+
+rebulit
+tensor(0.0449, grad_fn=<MeanBackward0>)
+tensor(0.0285, grad_fn=<MeanBackward0>)
+tensor(0.0183, grad_fn=<MeanBackward0>)
+tensor(0.0159, grad_fn=<MeanBackward0>)
+tensor(0.0153, grad_fn=<MeanBackward0>)
+tensor(0.0129, grad_fn=<MeanBackward0>)
+tensor(0.0129, grad_fn=<MeanBackward0>)
+tensor(0.0122, grad_fn=<MeanBackward0>)
+Accuracy: 76.67%
+tensor(0.0115, grad_fn=<MeanBackward0>)
+Accuracy: 74.76%
+tensor(0.0112, grad_fn=<MeanBackward0>)
+Accuracy: 73.33%
+tensor(0.0106, grad_fn=<MeanBackward0>)
+Accuracy: 72.86%
