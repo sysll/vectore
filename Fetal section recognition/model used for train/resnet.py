@@ -9,7 +9,7 @@ import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 import os
-setup_seed(20)
+setup_seed(0)
 def get_vector(matrix, n):
     sum = []
     for j in range(matrix.shape[0]):
@@ -225,9 +225,8 @@ model = torch.load("the best")
 for para in model.parameters():
     para.requires_grad = False
 
-setup_seed(10)
-#50最好
-#开始训练自己的
+setup_seed(0)
+
 cnn = CNNModel(3200, 10, 50).to(device)
 # 定义损失函数和优化器
 criterion = nn.MSELoss()
