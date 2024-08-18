@@ -201,7 +201,6 @@ class ResidualBlock(nn.Module):
 
 # #开始训练自己的
 """以下训练是在上述的所有的模型都注释掉的情况下进行的"""
-setup_seed(5)  #4
 model = torch.load("eye")
 for para in model.parameters():
     para.requires_grad = False
