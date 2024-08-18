@@ -1,8 +1,0 @@
-tensor(0.0183, grad_fn=<MeanBackward0>)
-Accuracy: 11.90%
-tensor(0.0130, grad_fn=<MeanBackward0>)
-Accuracy: 51.43%
-tensor(0.0106, grad_fn=<MeanBackward0>)
-Accuracy: 51.43%
-.......
-然后都是51.3
