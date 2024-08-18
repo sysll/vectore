@@ -31,7 +31,7 @@ def setup_seed(seed):
     torch.cuda.manual_seed(seed)     # 当前GPU
     os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8' # CUDA >= 10.2版本会提示设置这个环境变量
     torch.use_deterministic_algorithms(True)
-setup_seed(4)  #
+setup_seed(0)  #
 
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
