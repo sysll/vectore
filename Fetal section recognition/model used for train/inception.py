@@ -10,7 +10,7 @@ import torch.optim as optim
 setup_seed(4)
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 # 加载预训练的Inception模型
-model = models.inception_v3(weights=None)
+model = models.inception_v2(weights=None)
 model.fc = torch.nn.Linear(2048, 10)  # 将最后的全连接层设置为3分类
 model.aux_logits = False  # 禁用辅助分类器
 model = model.to(device)
@@ -20,9 +20,9 @@ import torchvision.datasets as datasets
 #得到数据
 data_dir = 'D:\\Users\\ASUS\\Desktop\\SetA'   # 样本地址
 transform1 = transforms.Compose([
-    transforms.Resize((299, 299)),
+    transforms.Resize((224, 224)),
     transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])  # 因为只有一个通道，所以只需要一个均值和一个标准差
+    transforms.Normalize([0], [1])  # 因为只有一个通道，所以只需要一个均值和一个标准差
 ])
 
 # 构建训练和验证的样本数据集，应用transform
