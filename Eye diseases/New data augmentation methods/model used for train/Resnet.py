@@ -21,6 +21,7 @@ data_dir = 'D:/Users/ASUS/Desktop/百度下载位置/眼球的训练测试数据
 transform1 = transforms.Compose([
     transforms.Resize(400),
     transforms.CenterCrop(300),
+    transforms.CenterCrop(200),
     transforms.ToTensor(),
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])  # 因为只有一个通道，所以只需要一个均值和一个标准差
 ])
