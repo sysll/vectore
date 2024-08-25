@@ -15,7 +15,7 @@ data_dir = 'D:\\Users\\ASUS\\Desktop\\良性癌症等检测'   # 样本地址
 transform1 = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
-    transforms.Normalize([0], [1])  # 因为只有一个通道，所以只需要一个均值和一个标准差
+    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]) 
 ])
 
 # 构建训练和验证的样本数据集，应用transform
@@ -29,6 +29,7 @@ dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x], batch_size=16, 
 # 粉笔计算训练与测试的样本数，字典格式
 dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'val']}   # 训练与测试的样本数
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
 # # 创建模型实例
 model = timm.create_model('vit_base_patch16_224', num_classes=3).to(device)
 
