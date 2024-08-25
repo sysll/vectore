@@ -14,7 +14,7 @@ transform1 = transforms.Compose([
     transforms.CenterCrop(300),
     transforms.Resize(224),
     transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])  # 因为只有一个通道，所以只需要一个均值和一个标准差
+    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]) 
 ])
 
 # 构建训练和验证的样本数据集，应用transform
