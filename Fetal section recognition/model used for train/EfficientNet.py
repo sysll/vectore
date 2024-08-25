@@ -7,12 +7,13 @@ import torch.nn as nn
 from torchvision import datasets
 import torchvision.transforms as transforms
 Max = 0
+
 #得到数据
 data_dir = 'D:\\Users\\ASUS\\Desktop\\SetA'   # 样本地址
 transform1 = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    transforms.Normalize([0], [1])
 ])
 
 # 构建训练和验证的样本数据集，应用transform
