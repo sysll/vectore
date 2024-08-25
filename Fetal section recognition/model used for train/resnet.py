@@ -54,16 +54,13 @@ class CNNModel(nn.Module):
         conv_out = conv_out.flatten(1, -1)
         output = self.fc_layer(conv_out)
         return output
+        
 #得到数据
 data_dir = 'D:\\Users\\ASUS\\Desktop\\SetA'   # 样本地址
 transform1 = transforms.Compose([
     transforms.Resize((200, 200)),
-    # transforms.Grayscale(num_output_channels=1),  # 将图像转为灰度，num_output_channels=1表示生成一个通道
-    # transforms.ToTensor(),
-    # transforms.Normalize(mean=[0], std=[1])  # 因为只有一个通道，所以只需要一个均值和一个标准差
-
     transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])  # 因为只有一个通道，所以只需要一个均值和一个标准差
+    transforms.Normalize([0], [1])  # 因为只有一个通道，所以只需要一个均值和一个标准差
 ])
 
 # 构建训练和验证的样本数据集，应用transform
