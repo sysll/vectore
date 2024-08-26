@@ -21,7 +21,7 @@ data_dir = 'D:/Users/ASUS/Desktop/百度下载位置/眼球的训练测试数据
 transform1 = transforms.Compose([
     transforms.Resize(400),
     transforms.CenterCrop(300),
-    transforms.CenterCrop(200),
+    transforms.Resize(200),
     transforms.ToTensor(),
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])  # 因为只有一个通道，所以只需要一个均值和一个标准差
 ])
@@ -67,10 +67,10 @@ class ResNet(nn.Module):
         self.relu = nn.ReLU(inplace=True)
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
 
-        self.layer1 = self._make_layer(64, 64, 2, stride=2)
-        self.layer2 = self._make_layer(64, 128, 2, stride=2)
-        self.layer3 = self._make_layer(128, 256, 2, stride=2)
-        self.layer4 = self._make_layer(256, 64, 2)
+        self.layer1 = self._make_layer(64, 64, 2)
+        self.layer2 = self._make_layer(64, 128, 2)
+        self.layer3 = self._make_layer(128, 256, 2, stride=5)
+        self.layer4 = self._make_layer(256, 64)
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
 
         self.fc = nn.Linear(64, num_classes)
