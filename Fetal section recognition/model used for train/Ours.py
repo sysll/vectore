@@ -9,7 +9,7 @@ import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 import os
-setup_seed(0)
+setup_seed(4)
 def get_vector(matrix, n):
     sum = []
     for j in range(matrix.shape[0]):
