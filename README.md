@@ -13,7 +13,7 @@ def get_vector(matrix, n):
     sum = []
     for j in range(matrix.shape[0]):
         real_eigenvectors = []
-        U, S, V = torch.svd(matrix[j])
+        U, S, V = torch.svd(matrix[j] + 1)
         for i in range(int(n)):
             real_eigenvectors.append(U[:, i] * S[i])
         part = torch.cat(real_eigenvectors)
@@ -43,9 +43,7 @@ class fCNNModel(nn.Module):
         )
 
         self.fc_layer = nn.Sequential(
-            nn.Linear((int(input_size/k))*36, 100),  # 更新线性层的输入大小
-            nn.ReLU(),
-            nn.Linear(100, output_size),
+            nn.Linear((int(input_size / k)) * 36, output_size),  # 更新线性层的输入大小
         )
 
     def forward(self, x):
@@ -68,9 +66,7 @@ class kCNNModel(nn.Module):
         )
 
         self.fc_layer = nn.Sequential(
-            nn.Linear((int(input_size/k))*36, 100),  # 更新线性层的输入大小
-            nn.ReLU(),
-            nn.Linear(100, output_size),
+            nn.Linear((int(input_size/k))*36, output_size),  # 更新线性层的输入大小
         )
 
     def forward(self, x):
