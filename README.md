@@ -65,7 +65,6 @@ class kCNNModel(nn.Module):
             nn.ReLU(),
             nn.Conv1d(in_channels=18, out_channels=36, kernel_size=k, stride=k),
             nn.ReLU(),
-            nn.LayerNorm(64),
         )
 
         self.fc_layer = nn.Sequential(
@@ -83,7 +82,7 @@ class kCNNModel(nn.Module):
 
 
 #hyperparameter (4） stride=FZ, kernel_size=FZ
-feature_map = torch.randn((1, 64, 10, 10))
+feature_map = torch.randn((1, 64, 10, 10))   #This feature_map is the feature map extracted by the convolutional model.
 cnn=fCNNModel(3200, 10, 10)
 v = get_bat_v(feature_map, 5).unsqueeze(0)
 print(v.shape)   # torch.Size([1, 3200])
@@ -93,7 +92,7 @@ print(out.shape)  # torch.Size([1, 10])
 
 
 #hyperparameter (5） stride=k*FZ, kernel_size=k*FZ
-feature_map = torch.randn((1, 64, 10, 10))
+feature_map = torch.randn((1, 64, 10, 10))   #This feature_map is the feature map extracted by the convolutional model.
 cnn = kCNNModel(3200, 10, 50)
 v = get_bat_v(feature_map, 5).unsqueeze(0)
 print(v.shape)   # torch.Size([1, 3200])
