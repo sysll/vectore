@@ -13,7 +13,7 @@ def get_vector(matrix, n):
     sum = []
     for j in range(matrix.shape[0]):
         real_eigenvectors = []
-        U, S, V = torch.svd(matrix[j] + 1)
+        U, S, V = torch.svd(matrix[j])
         for i in range(int(n)):
             real_eigenvectors.append(U[:, i] * S[i])
         part = torch.cat(real_eigenvectors)
