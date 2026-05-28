@@ -1,0 +1,65 @@
+tensor(0.0387, grad_fn=<MeanBackward0>)
+Accuracy: 14.14%
+tensor(0.0358, grad_fn=<MeanBackward0>)
+Accuracy: 32.07%
+tensor(0.0317, grad_fn=<MeanBackward0>)
+Accuracy: 42.93%
+tensor(0.0273, grad_fn=<MeanBackward0>)
+Accuracy: 51.72%
+tensor(0.0234, grad_fn=<MeanBackward0>)
+Accuracy: 61.55%
+tensor(0.0200, grad_fn=<MeanBackward0>)
+Accuracy: 66.03%
+tensor(0.0178, grad_fn=<MeanBackward0>)
+Accuracy: 63.62%
+tensor(0.0166, grad_fn=<MeanBackward0>)
+Accuracy: 70.00%
+tensor(0.0136, grad_fn=<MeanBackward0>)
+Accuracy: 73.28%
+tensor(0.0111, grad_fn=<MeanBackward0>)
+Accuracy: 75.17%
+tensor(0.0091, grad_fn=<MeanBackward0>)
+Accuracy: 72.59%
+tensor(0.0078, grad_fn=<MeanBackward0>)
+Accuracy: 76.03%
+tensor(0.0062, grad_fn=<MeanBackward0>)
+Accuracy: 78.62%
+tensor(0.0046, grad_fn=<MeanBackward0>)
+Accuracy: 75.00%
+tensor(0.0039, grad_fn=<MeanBackward0>)
+Accuracy: 78.79%
+tensor(0.0033, grad_fn=<MeanBackward0>)
+Accuracy: 79.66%
+tensor(0.0029, grad_fn=<MeanBackward0>)
+Accuracy: 79.48%
+tensor(0.0023, grad_fn=<MeanBackward0>)
+Accuracy: 80.17%
+tensor(0.0021, grad_fn=<MeanBackward0>)
+Accuracy: 80.34%
+tensor(0.0020, grad_fn=<MeanBackward0>)
+Accuracy: 80.34%
+tensor(0.0018, grad_fn=<MeanBackward0>)
+Accuracy: 79.66%
+tensor(0.0016, grad_fn=<MeanBackward0>)
+Accuracy: 80.69%
+tensor(0.0015, grad_fn=<MeanBackward0>)
+Accuracy: 80.86%
+
+
+Accuracy: 81.90%
+              precision    recall  f1-score   support
+
+           0     0.7170    0.7451    0.7308        51
+           1     0.8167    0.6806    0.7424        72
+           2     0.6346    0.8919    0.7416        37
+           3     0.9615    0.9868    0.9740        76
+           4     0.7949    0.7209    0.7561        43
+           5     0.7761    0.7647    0.7704        68
+           6     0.8333    0.9259    0.8772        54
+           7     1.0000    0.9444    0.9714        36
+           8     0.8361    0.7727    0.8031        66
+           9     0.8158    0.8052    0.8105        77
+
+    accuracy                         0.8190       580
+   macro avg     0.8186    0.8238    0.8177       580
+weighted avg     0.8239    0.8190    0.8187       580
